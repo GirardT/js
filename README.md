@@ -1,1 +1,1 @@
-# js
+# 15-Week Beginner JavaScript Study Group
