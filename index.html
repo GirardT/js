@@ -638,8 +638,166 @@
                 var hatValue = testObj.hat;      // Change this line
                 var shirtValue = testObj.shirt;    // Change this line
 
+                // Day 011
+                // Accessing Object Properties with Bracket Notation
+                // Setup
+                var testObj = {
+                    "an entree": "hamburger",
+                    "my side": "veggies",
+                    "the drink": "water"
+                };
 
-                document.getElementById("result2").innerHTML = result2;
+                // Only change code below this line
+
+                var entreeValue = testObj["an entree"];   // Change this line
+                var drinkValue = testObj["the drink"];    // Change this line
+
+                // Accessing Object Properties with Variables
+                // Setup
+                var testObj = {
+                    12: "Namath",
+                    16: "Montana",
+                    19: "Unitas"
+                };
+                // Only change code below this line
+                var playerNumber = 16;       // Change this line
+                var player = testObj[playerNumber];   // Change this line
+
+                // Updating Object Properties
+                // Setup
+                var myDog = {
+                    "name": "Coder",
+                    "legs": 4,
+                    "tails": 1,
+                    "friends": ["freeCodeCamp Campers"]
+                };
+
+                // Only change code below this line
+                myDog.name = "Happy Coder";
+
+                // Add New Properties to a JavaScript Object
+                // Setup
+                var myDog = {
+                "name": "Happy Coder",
+                "legs": 4,
+                "tails": 1,
+                "friends": ["freeCodeCamp Campers"]
+                };
+
+                // Only change code below this line
+                myDog.bark = "woof";
+
+                // Delete Properties from a JavaScript Object
+                // Setup
+                var myDog = {
+                    "name": "Happy Coder",
+                    "legs": 4,
+                    "tails": 1,
+                    "friends": ["freeCodeCamp Campers"],
+                    "bark": "woof"
+                };
+
+                // Only change code below this line
+                delete myDog.tails;
+
+                // Using Objects for Lookups
+                // Setup
+                function phoneticLookup(val) {
+                var result = "";
+
+                // Only change code below this line
+                var lookup = {
+                    alpha: "Adams",
+                    bravo: "Boston",
+                    charlie: "Chicago",
+                    delta: "Denver",
+                    echo: "Easy",
+                    foxtrot: "Frank"
+                };
+                result = lookup[val];
+                // Only change code above this line
+                return result;
+                }
+
+                phoneticLookup("charlie");
+
+                // Testing Objects for Properties
+                function checkObj(obj, checkProp) {
+                    // Only change code below this line
+                    if (obj.hasOwnProperty(checkProp)) {
+                        return obj[checkProp];
+                    } else {
+                        return "Not Found";
+                    }
+                    // Only change code above this line
+                }
+
+                // Manipulating Complex Objects
+                var myMusic = [
+                    {
+                        "artist": "Billy Joel",
+                        "title": "Piano Man",
+                        "release_year": 1973,
+                        "formats": [
+                        "CD",
+                        "8T",
+                        "LP"
+                        ],
+                        "gold": true
+                    },
+                    // Add a record here
+                    {
+                        artist: "Slipknot",
+                        title: "The Devil in I",
+                        release_year: 2019,
+                        formats: [
+                        "CD",
+                        "LP"
+                        ]
+                    }
+                ];
+
+                // Accessing Nested Objects
+                // Setup
+                var myStorage = {
+                    "car": {
+                        "inside": {
+                            "glove box": "maps",
+                            "passenger seat": "crumbs"
+                        },
+                        "outside": {
+                            "trunk": "jack"
+                        }
+                    }
+                };
+
+                var gloveBoxContents = myStorage.car.inside["glove box"]; // Change this line
+
+                // Accessing Nested Arrays
+                // Setup
+                var myPlants = [
+                    {
+                        type: "flowers",
+                        list: [
+                            "rose",
+                            "tulip",
+                            "dandelion"
+                        ]
+                    },
+                    {
+                        type: "trees",
+                        list: [
+                            "fir",
+                            "pine",
+                            "birch"
+                        ]
+                    }
+                ];
+
+                // Only change code below this line
+                var secondTree = myPlants[1].list[1]; // Change this line
+
+                document.getElementById("result2").innerHTML = secondTree;
         </script>
     </body>
 </html>
