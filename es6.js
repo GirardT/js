@@ -216,5 +216,52 @@ const bicycle = {
 bicycle.setGear(3);
 console.log(bicycle.gear);
 
+result += "<br>" + bicycle.gear;
+
+// Day 018
+// Use class Syntax to Define a Constructor Function
+// Only change code below this line
+class Vegetable {
+    constructor(name) {
+        this.name = name;
+    }
+}
+// Only change code above this line
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+
+result += "<br>" + carrot.name;
+
+// Use getters and setters to Control Access to an Object
+// Only change code below this line
+class Thermostat {
+    constructor (Fahrenheit) {
+        this._Fahrenheit = Fahrenheit;
+    }
+    get temperature() {
+        return (5/9 * (this._Fahrenheit -32));
+    }
+    set temperature(Celsius) {
+        this._Fahrenheit = (Celsius * 9.0 / 5 + 32);
+    }
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+result += "<br>" + temp;
+
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+result += "<br>" + temp;
+
+// Reuse JavaScript Code Using import
+// import {uppercaseString, lowercaseString} from './string_functions';
+// Only change code above this line
+
+// uppercaseString("hello");
+// lowercaseString("WORLD!");
+
 // result += "<br>" + 
 document.getElementById("result").innerHTML = result;
