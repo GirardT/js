@@ -168,33 +168,53 @@ const stats = {
 };
 
 // Only change code below this line
-const half = ({max, min}) => (max + min) / 2.0; 
+const half = ({max, min} = stats) => (max + min) / 2.0; 
 // Only change code above this line
 
 result += "<br>" + half;
 
 // Create Strings using Template Literals
-const result = {
+const result1 = {
     success: ["max-length", "no-amd", "prefer-arrow-functions"],
     failure: ["no-var", "var-on-top", "linebreak"],
     skipped: ["no-extra-semi", "no-dup-keys"]
-};
-
-function makeList(arr) {
+  };
+  function makeList(arr) {
     // Only change code below this line
     const failureItems = [];
-    failureItems.push
-    arr.forEach();
+    arr.forEach(
+      element => failureItems.push(`<li class="text-warning">${element}</li>`)); 
     // Only change code above this line
-
+  
     return failureItems;
-}
+  }
+  
+  const failuresList = makeList(result1.failure);
 
-const failuresList = makeList(result.failure);
-
+  result += "<br>" + failuresList;
 
 // Write Concise Object Literal Declarations Using Object Property Shorthand
-// Write Concise Declarative Functions with ES6
+const createPerson = (name, age, gender) => {
+    // Only change code below this line
+    return {
+      name,
+      age,
+      gender
+    };
+    // Only change code above this line
+  };
 
-//result += "<br>" + 
+// Write Concise Declarative Functions with ES6
+// Only change code below this line
+const bicycle = {
+    gear: 2,
+    setGear(newGear) {
+        this.gear = newGear;
+    }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+// result += "<br>" + 
 document.getElementById("result").innerHTML = result;
